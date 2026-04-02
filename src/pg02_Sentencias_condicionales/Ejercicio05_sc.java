@@ -1,35 +1,38 @@
 package pg02_Sentencias_condicionales;
-import javax.swing.*;
+import java.util.*;
 public class Ejercicio05_sc {
-
 	public static void main(String[] args) {
 		
-		String num1= JOptionPane.showInputDialog("Introduce un número");
-		int num_1= Integer.parseInt(num1);
+		
+		Scanner entrada= new Scanner (System.in);
+		
+		System.out.println("Introduce un primero nº");
+		int num1=entrada.nextInt();
+		int num_menor=num1;
+		
+		System.out.println("Introduce un segundo nº");
+		int num2=entrada.nextInt();
+		
+		System.out.println("Introduce un tercer nº");
+		int num3=entrada.nextInt();
 	
-		String num2= JOptionPane.showInputDialog("Introduce otro número");
-		int num_2= Integer.parseInt(num2);
 		
-        String num3= JOptionPane.showInputDialog("Introduce otro número");
-		int num_3= Integer.parseInt(num3);
 		
-		int menor;
-
-		if (num_1 <=num_2 && num_1<=num_3) {
-			menor= num_1;
-			System.out.println( num_1 + " es el menor");
+		
+		if (num2<=num1 && num2<=num3) { 
+			num_menor=num2;
+		
+		}
+		
+		else if (num3<=num1 && num3<=num2) {
+				 num_menor=num3;
 			
 		}
-			
-		else if (num_2 <=num_1 && num_2<=num_3) {
-			menor=num_2;
-			System.out.println(num_2+ " es el menor");
-		}
 		
-		else {
-			menor= num_3;
-			System.out.println( num3 + " es el menor");
-		}
+		System.out.println("Introduciste: " + " " + num1 + " " + num2 + " " + num3 );
+		System.out.println(num_menor + " Es el número menor de los tres");
+		
+		entrada.close();
 		
 	}
 

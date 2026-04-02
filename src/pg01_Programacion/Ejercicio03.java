@@ -1,20 +1,25 @@
 package pg01_Programacion;
-import javax.swing.JOptionPane;
-
+import java.util.*;
 public class Ejercicio03 {
 
 	public static void main(String[] args) {
+		// TODO Auto-generated method stub
 		
+	
+		Scanner entrada= new Scanner (System.in);
 		
-		String num1 = JOptionPane.showInputDialog("Introduce un número por favor ");
+	
+		System.out.println("Introduce un número");
+		int primer_num= entrada.nextInt();
 		
-		int num_1 = Integer.parseInt(num1);
+		System.out.println("introduce un segundo número");
+		int segundo_num= entrada.nextInt();
 		
-		String num2 = JOptionPane.showInputDialog("Introduce un segundo número");
+		int producto= primer_num*segundo_num ;
 		
-		int num_2 = Integer.parseInt(num2);
+		System.out.println("El producto de los números que has introducido es " + producto);
 		
-		System.out.println("El producto de esos números es " + num_1* num_2);
+		entrada.close();
 
 	}
 

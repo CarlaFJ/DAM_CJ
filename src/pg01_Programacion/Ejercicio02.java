@@ -1,26 +1,24 @@
 package pg01_Programacion;
-import java.util.Scanner;
-
+import java.util.*;
 public class Ejercicio02 {
 
 	public static void main(String[] args) {
 		
 
-		Scanner sc=new Scanner (System.in);
+		Scanner entrada= new Scanner(System.in);
 		
-		System.out.println("Introduzca dos números");
+		System.out.println("Introduce un número");
+		int primer_num= entrada.nextInt();
 		
-		int x,y;
-		int z;
+		System.out.println("introduce un segundo número");
+		int segundo_num= entrada.nextInt();
 		
-		x=sc.nextInt();
-		y=sc.nextInt();
-		z= x+y;
+		int tercer_num= primer_num+segundo_num ;
 		
-		System.out.println("La suma de esos dos números es "+ z);
+		System.out.println("La suma de los números que has introducido es " + tercer_num);
 		
-		sc.close();
-		
+		entrada.close();
 	}
 
 }
+ 

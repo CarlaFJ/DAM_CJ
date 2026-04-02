@@ -1,24 +1,30 @@
 package pg02_Sentencias_condicionales;
-import javax.swing.*;
-
+import java.util.*;
 public class Ejercicio03_sc {
 
 	public static void main(String[] args) {
 		
-		String num1= JOptionPane.showInputDialog("Introduce un número por favor");
-		int num2= Integer.parseInt(num1);
+		Scanner entrada= new Scanner (System.in);
 		
-		if (num2>0) {
-			System.out.println("El número es positivo");
+		System.out.println("Introduce un número, por favor");
+		
+		int num=entrada.nextInt();
+		
+		if (num<0) {
+			System.out.println("Es un nº negativo");
 		}
 		
-		if (num2<0) {
-			System.out.println("El número es negativo");
+		else if (num==0) {
+			System.out.println("Es un nº nulo");
 		}
 		
-		else if(num2==0) {
-			System.out.println("El número es nulo");
+		else {
+			System.out.println("Es un nº positivo");
 		}
+		
+		
+		entrada.close();
+		
 	}
 
 }

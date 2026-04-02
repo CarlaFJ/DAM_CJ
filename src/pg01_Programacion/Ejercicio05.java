@@ -1,22 +1,15 @@
 package pg01_Programacion;
-import java.util.*;
+import javax.swing.*;
 public class Ejercicio05 {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner (System.in);
+		int n1= Integer.parseInt(JOptionPane.showInputDialog("Introduce un primer número"));
+		int n2= Integer.parseInt(JOptionPane.showInputDialog("Introduce un primer número"));
+		int n3= Integer.parseInt(JOptionPane.showInputDialog("Introduce un primer número"));
+		int suma= n1+n2+n3;
 		
-		System.out.println("Introduce tres números por favor");
-		
-		int num1 = sc.nextInt();
-		int num2 = sc.nextInt();
-		int num3 = sc.nextInt();
-		int suma = num1 + num2 + num3;
-		
-		System.out.println(suma + " es la suma de los tres números ");
-		
-		sc.close();
-
+		System.out.println("La suma es " + suma);
 	}
 
 }

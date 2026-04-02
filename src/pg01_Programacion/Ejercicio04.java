@@ -1,19 +1,14 @@
 package pg01_Programacion;
-import javax.swing.JOptionPane;
-
+import javax.swing.*;
 public class Ejercicio04 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-		String frase1 = JOptionPane.showInputDialog("Introduce una frase");
 		
-		String frase2 = JOptionPane.showInputDialog("Introduce una segunada frase");
+		String f1=JOptionPane.showInputDialog("introduce una frase");
+		String f2=JOptionPane.showInputDialog("Introduzca una segunda frase, please");
 		
-		System.out.print(frase1 + " " + frase2);
-		
-		
-		
+		System.out.println(f1 + " " + f2);
+	
 	}
 
 }

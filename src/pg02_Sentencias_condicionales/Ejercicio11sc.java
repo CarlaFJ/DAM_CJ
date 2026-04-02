@@ -6,43 +6,64 @@ public class Ejercicio11sc {
 	
 		Scanner entrada= new Scanner (System.in);
 		
-		boolean fechaCorrecta= true;
-		
-		System.out.print("Introduce un día");
+		System.out.println("Introduce una fecha para calcular la fecha del día siguiente");
+		System.out.println("introduce un día");
 		int dia= entrada.nextInt();
 		
-		System.out.print("Introduce un mes");
+		System.out.println("introduce un mes");
 		int mes= entrada.nextInt();
-		
-		System.out.print("Introduce un año");
+
+		System.out.println("introduce un año");
 		int anyo= entrada.nextInt();
 		
-		int ultimodia= 31;
+		int dia_mas=0;
+		int ult_dia=0;
+		int mes_mas=0;               
+		int anyo_mas=0;
 		
-		if(mes==2) {ultimodia=28;}
-		if (mes==4 || mes==6 || mes==9 || mes==11) {ultimodia=30;}
+		//--------------------------------------------------------------------------------------------------------------
 		
-		if(dia<1 || dia>ultimodia) {fechaCorrecta=false;}
-		if(mes<1 || mes>12) {fechaCorrecta=false;}
-		if(anyo<0) {fechaCorrecta=false;}
-		
-		dia= dia+1;
-		if(dia>ultimodia)
-		{dia=1; 
-		mes++;
-		if(mes>12)
-		{mes=1;
-		anyo++;}
+		if(mes==2) {
+			ult_dia= 28;
 		}
 		
-		if (fechaCorrecta) {
-			System.out.println("Fecha correcta");
-			System.out.println("La fecha de mañana es " + dia + "/" + mes + "/" + anyo);
-			}
-		
+		else if(mes==4 || mes==6 || mes==9 || mes==11) {
+			ult_dia= 30;
+		}
+		 
 		else {
-			System.out.println("Error fecha incorrecta");
+			ult_dia= 31;
 		}
+		
+	
+		//Primero el caso de cambio de año
+		
+		if(dia==31 && mes==12) {
+			dia_mas=1;
+			mes_mas=1;
+			anyo_mas=(anyo+1);
+		}
+		
+		//Segundo el caso de cambio de mes
+		
+		else if (dia==ult_dia) { 
+			dia_mas=1;
+			mes_mas=(mes+1);
+			anyo_mas=anyo;
+		}
+		
+		// Tercero el caso de cambio de dia
+		else if (dia<ult_dia) {
+			dia_mas=(dia+1);
+			mes_mas=mes;
+			anyo_mas=anyo;
+		}
+		else {
+			System.out.println("No puedo calcularlo porque esa fecha no existe");
+		}
+		
+		
+		System.out.println(dia_mas + "/" + mes_mas + "/" + anyo_mas);
 		
 		entrada.close();
 		

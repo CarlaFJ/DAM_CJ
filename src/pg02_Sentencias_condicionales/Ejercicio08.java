@@ -6,28 +6,53 @@ public class Ejercicio08 {
 		
 		Scanner entrada= new Scanner (System.in);
 		
-		System.out.print("Introduce un día ");
-		int dia= entrada.nextInt();
-		System.out.print("Introduce un mes ");
-		int mes= entrada.nextInt();
-		System.out.print("Introduce un año ");
-		int anyo= entrada.nextInt();
+		System.out.println("Introduce un día");
+		int dia=entrada.nextInt();
 		
-		int aux= 0;
+		System.out.println("Introduce un mes");
+		int mes=entrada.nextInt();
 		
-		if (dia<1) { aux=1;}
-		if (dia>30) { aux=1;}
-		if (mes<1) {aux=1;}
-		if (mes>12) {aux=1;}
-		if(anyo<1) {aux=1;}
+		System.out.println("Introduce un año ");
+		int anyo=entrada.nextInt();
+		
+		int aux=0;
+		
+		
+		if(dia<1 || dia>30) {
+			aux=1;
+		}
+		 
+		if (mes<1 || mes>12) {
+			aux=1;
+		}
+		
+		if (anyo<1 || anyo>2025) {
+			aux=1;
+		}
+		
 		
 		if (aux==0) {
-			System.out.println("La fecha es correcta");
+			System.out.println("Fecha correcta");
 		}
 		else {
 			System.out.println("Fecha incorrecta");
 		}
-
+		
+		
+		entrada.close();
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
+
 
 }
